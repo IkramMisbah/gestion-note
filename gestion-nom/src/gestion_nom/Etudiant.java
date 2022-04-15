@@ -20,11 +20,11 @@ public class Etudiant implements Comparable<Etudiant> {
     	 return false;
     	 return ((Etudiant) obj).id== this.id;
      }
-     public boolean compareTO (Etudiant e)
+     public int compareTO (Etudiant e)
      {
-    	 if (this.note > e.note)
-    		 return false;
-    	 return true;
+    	 if(this.note==e.note) return 0;
+ 		if(this.note>e.note) return 1;
+ 		return -1;
      }
  	 
 }
