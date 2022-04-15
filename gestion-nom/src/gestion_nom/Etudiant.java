@@ -1,6 +1,8 @@
 package gestion_nom;
 
-public class Etudiant {
+
+
+public class Etudiant implements Comparable<Etudiant> {
      private int id;
      private String nom;
      private double note;
@@ -18,4 +20,11 @@ public class Etudiant {
     	 return false;
     	 return ((Etudiant) obj).id== this.id;
      }
+     public boolean compareTO (Etudiant e)
+     {
+    	 if (this.note > e.note)
+    		 return false;
+    	 return true;
+     }
+ 	 
 }
